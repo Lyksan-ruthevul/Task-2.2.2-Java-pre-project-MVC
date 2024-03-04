@@ -11,6 +11,7 @@ import java.util.List;
 @Repository
 public class CarDaoImp implements CarDao {
     List<Car> carList = new ArrayList<>();
+
     {
         carList.add(new Car(1, "Lada", "Red"));
         carList.add(new Car(2, "BMW", "White"));
@@ -19,6 +20,7 @@ public class CarDaoImp implements CarDao {
         carList.add(new Car(5, "Volvo", "Blue"));
     }
 
+    @Override
     public List<Car> getList() {
         return carList;
     }

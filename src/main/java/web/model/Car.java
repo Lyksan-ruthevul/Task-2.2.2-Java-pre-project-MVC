@@ -43,11 +43,7 @@ public class Car {
 
     @Override
     public String toString() {
-        return "Car{" +
-                "id=" + id +
-                ", model='" + model + '\'' +
-                ", color='" + color + '\'' +
-                '}';
+        return "Car{" + "id=" + id + ", model='" + model + '\'' + ", color='" + color + '\'' + '}';
     }
 
     @Override

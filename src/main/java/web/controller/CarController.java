@@ -23,10 +23,8 @@ public class CarController {
     }
 
     @GetMapping(value = "/cars")
-    public String printCars(@RequestParam(value = "count",
-            defaultValue = "5") int count, ModelMap model) {
-        List<Car> carList =  (count >= 0) ?
-                carService.getCars(count) : carService.getCars(0);
+    public String printCars(@RequestParam(value = "count", defaultValue = "5") int count, ModelMap model) {
+        List<Car> carList = (count >= 0) ? carService.getCars(count) : carService.getCars(0);
         model.addAttribute("cars", carList);
         return "cars";
     }
